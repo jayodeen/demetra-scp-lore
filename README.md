@@ -1,11 +1,14 @@
-# Зона-40 — SCP Foundation RP
+# Зона-40 — Sigma-9 / Wikidot-style GitHub Pages
 
-Статический сайт для GitHub Pages. Визуальный стиль вдохновлён классической темой Sigma-9 SCP Wiki, но HTML/CSS адаптированы для обычного GitHub Pages без Wikidot.
+Этот вариант подключает официальный Sigma CSS напрямую:
 
-## Публикация
-1. Создайте репозиторий на GitHub.
-2. Загрузите `index.html`, `style.css`, `script.js`.
-3. Settings → Pages → Deploy from a branch → `main` / root.
-4. Откройте выданный GitHub Pages URL.
+`https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css`
 
-Контент взят из предоставленной страницы Google Sites «Зона 40» и оформлен как фанатское RP-досье.
+GitHub Pages не поддерживает Wikidot-конструкции `[[code]]`, `theme:site`, `wdfiles.com` и Site Manager, поэтому CSS подключён обычным `<link>`.
+
+Файлы:
+- `index.html` — структура страницы, близкая к Wikidot (`#header`, `#top-bar`, `#side-bar`, `#main-content`)
+- `style.css` — только адаптационный слой
+- `README.md` — инструкция
+
+Публикация: загрузить файлы в репозиторий → Settings → Pages → Deploy from branch → main / root.
