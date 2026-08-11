@@ -1,86 +1,53 @@
-/* =========================================================
-   ЗОНА-40 — site.css
-   This file is the local layout layer for the site's custom HTML.
-   It intentionally does NOT depend on Wikidot/Sigma layout IDs.
-   ========================================================= */
-:root{
-  --red:#901c1c;
-  --dark:#222;
-  --line:#bbb;
-  --bg:#e9e9e9;
-  --paper:#fff;
-  --muted:#666;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:#222}
-body{font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-a{color:#7d1616}
-a:hover{color:#b32626}
-.site{min-height:100vh;background:var(--paper)}
-.site-header{background:#fff;border-bottom:4px solid var(--red)}
-.header-inner{
-  max-width:1180px;min-height:108px;margin:0 auto;padding:22px 24px;
-  display:flex;align-items:center;gap:24px
-}
-.site-brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#222;min-width:0}
-.scp-mark{width:58px;height:58px;border:3px solid #222;border-radius:50%;display:grid;place-items:center;flex:0 0 auto}
-.scp-mark-center{font:700 14px/1 "Roboto Mono",monospace}
-.brand-copy{display:flex;flex-direction:column;min-width:0}
-.brand-title{font:700 30px/1 "Roboto Mono",monospace;letter-spacing:-1px}
-.brand-subtitle{font:11px/1.3 Arial,sans-serif;color:#666;letter-spacing:.8px;margin-top:6px}
-.site-search{margin-left:auto;display:flex;gap:6px}
-.site-search input{width:260px;height:34px;border:1px solid #aaa;padding:6px 9px;background:#fff}
-.site-search button{height:34px;background:var(--red);color:#fff;border:0;padding:0 13px;cursor:pointer}
-.mobile-menu{display:none;margin-left:auto;background:#222;color:#fff;border:0;padding:8px 12px;font-size:18px}
-.site-topbar{background:#222;border-bottom:3px solid var(--red)}
-.topbar-inner{max-width:1180px;margin:0 auto;display:flex;overflow:auto}
-.topbar-inner a{color:#fff;text-decoration:none;padding:10px 16px;font-size:12px;white-space:nowrap}
-.topbar-inner a:hover{background:var(--red)}
-.site-layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:0;background:#fff;min-height:calc(100vh - 150px)}
-.site-sidebar{padding:22px 12px 40px 0}
-.sidebar-box{border:1px solid #ccc;background:#f7f7f7;margin-bottom:15px}
-.sidebar-heading{background:var(--red);color:#fff;padding:8px 10px;font-weight:bold;font-size:12px}
-.sidebar-box>a,.sidebar-text{display:block;padding:7px 9px;border-bottom:1px solid #ddd;font-size:12px;text-decoration:none}
-.sidebar-box>a:last-child{border-bottom:0}
-.sidebar-text{color:#555}
-.mono,code{font-family:"Roboto Mono",monospace}
-.site-main{min-width:0;padding:28px 30px 60px}
-.breadcrumbs{color:#777;font-size:12px;margin:0 0 20px}
-.classification{display:flex;gap:15px;align-items:flex-start;background:#eee;border-left:5px solid var(--red);padding:11px 13px;margin-bottom:24px;font-size:12px}
-.classification strong{white-space:nowrap}
-.document-title{border-bottom:2px solid #222;padding-bottom:13px}
-.document-title .eyebrow{font:700 11px "Roboto Mono",monospace;color:#777;letter-spacing:1px}
-.document-title h1{font:700 38px/1.15 "Roboto Mono",monospace;margin:7px 0}
-.document-title p{margin:0 0 8px;color:#555}
-.document-title code{font-size:12px}
-.document-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 30px}
-.document-meta>div{border:1px solid #bbb;background:#f5f5f5;padding:9px}
-.document-meta span{display:block;font-size:10px;font-weight:bold;color:#666}
-.document-meta strong{display:block;font:12px "Roboto Mono",monospace;margin-top:3px}
-.doc-section{margin:25px 0}
-.doc-section h2{font:700 22px/1.25 "Roboto Mono",monospace;margin:28px 0 12px;border-bottom:1px solid #ccc;padding-bottom:6px}
-.doc-section h3{margin:22px 0 8px}
-.doc-section p{margin:10px 0}
-.doc-section table{width:100%;border-collapse:collapse;margin:18px 0}
-.doc-section th,.doc-section td{border:1px solid #aaa;padding:9px;text-align:left;vertical-align:top}
-.doc-section th{width:27%;background:#e8e8e8;font-size:11px;text-transform:uppercase}
-.doc-block{background:#fafafa;border:1px solid #bbb;padding:15px;margin:16px 0}
-.warning{background:#eee;border-left:5px solid var(--red);padding:12px 15px;margin:20px 0}
-.site-footer{text-align:center;border-top:2px solid #222;margin-top:45px;padding:25px;color:#666}
-.site-footer strong{display:block;font:700 12px "Roboto Mono",monospace}
-.site-footer small{display:block;margin-top:5px}
-.search-hit{outline:3px solid rgba(144,28,28,.35);background:#fff7f7}
-img{max-width:100%;height:auto}
-hr{border:0;border-top:1px solid #ccc;margin:30px 0}
+/* Minimal compatibility layer for the official Sigma stylesheet on GitHub Pages.
+   The actual Sigma-9 CSS is loaded above from cdn.scpwiki.com. */
+html,body{background:#f5f5f5}
+body{font-family:Arial,Helvetica,sans-serif}
+#container-wrap{max-width:1200px;margin:0 auto;background:#fff;min-height:100vh}
+#header{min-height:110px;background:#fff;border-bottom:4px solid #901c1c}
+.header-holder{position:relative;max-width:1100px;margin:auto;min-height:110px;padding:25px 20px}
+#logo{display:block;width:360px;height:60px;background:none;color:#222;text-decoration:none}
+#logo span{font:700 30px "Roboto Mono",monospace;letter-spacing:-1px;line-height:60px}
+#search-top-box{position:absolute;right:20px;top:35px}
+#search-top-box-input{height:30px;border:1px solid #aaa;padding:4px 8px}
+#search-top-box-form-submit{height:30px;background:#901c1c;color:#fff;border:0;padding:0 10px}
+#top-bar{background:#222;border-bottom:3px solid #901c1c}
+.top-bar-menu ul{list-style:none;margin:0;padding:0;display:flex}
+.top-bar-menu li{margin:0}
+.top-bar-menu a{display:block;color:#fff;padding:10px 16px;text-decoration:none;font-size:12px}
+.top-bar-menu a:hover{background:#901c1c}
+.mobile-top-bar{display:none}
+#side-bar{width:210px;float:left;padding:20px 12px}
+.side-block{border:1px solid #ccc;margin-bottom:15px;background:#f7f7f7}
+.side-block .heading{background:#901c1c;color:#fff;padding:8px 10px;font-weight:bold;font-size:12px}
+.side-block .menu-item{padding:6px 9px;border-bottom:1px solid #ddd;font-size:12px}
+.side-block .menu-item:last-child{border-bottom:0}
+.side-block .text{color:#555}
+#main-content{margin-left:235px;padding:30px 35px 60px;max-width:900px}
+#page-title{font:700 38px "Roboto Mono",monospace;border-bottom:2px solid #222;padding-bottom:8px}
+#breadcrumbs{color:#777;font-size:12px;margin:8px 0 25px}
+#main-content h2{margin-top:38px}
+#main-content h3{margin-top:25px}
+.warning{background:#eee;border-left:5px solid #901c1c;padding:12px 15px;margin:20px 0}
+.content-panel{background:#fafafa;border:1px solid #bbb;padding:18px;margin:20px 0}
+.content-panel .title{font:700 11px "Roboto Mono",monospace;color:#777;letter-spacing:1px}
+.code{font-family:"Roboto Mono",monospace}
+.info-container{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.info-block{border:1px solid #bbb;background:#f5f5f5}
+.info-block-title{font-size:10px;font-weight:bold;color:#666;padding:7px;border-bottom:1px solid #ccc}
+.info-block-content{padding:9px;font-family:"Roboto Mono",monospace;font-size:12px}
+.wiki-content-table{width:100%;border-collapse:collapse;margin:20px 0}
+.wiki-content-table th,.wiki-content-table td{border:1px solid #aaa;padding:9px;text-align:left;vertical-align:top}
+.wiki-content-table th{width:27%;background:#e8e8e8;font-size:11px;text-transform:uppercase}
+.two-column{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.code-block{background:#222;color:#ddd;border:1px solid #111;padding:12px;overflow:auto}
+.code-block pre{margin:0;font:12px/1.7 "Roboto Mono",monospace}
+.redacted{background:#222;color:#222;user-select:none;padding:3px}
+.footer-wiki{text-align:center;border-top:2px solid #222;margin-top:45px;padding:25px;color:#666}
 @media(max-width:800px){
-  .header-inner{min-height:78px;padding:14px 15px}
-  .scp-mark{width:45px;height:45px}.brand-title{font-size:23px}.brand-subtitle{font-size:9px}
-  .site-search{display:none}.mobile-menu{display:block}
-  .site-layout{display:block}
-  .site-sidebar{padding:10px 15px;display:none}
-  .site-sidebar.open{display:block}
-  .site-main{padding:20px 15px 45px}
-  .document-title h1{font-size:30px}
-  .document-meta{grid-template-columns:1fr}
-  .classification{display:block}.classification strong{display:block;margin-bottom:5px}
+  #header{min-height:90px}.header-holder{min-height:90px;padding:15px}.brand-title{font-size:24px}
+  #logo{width:auto;height:45px}#logo span{font-size:23px;line-height:45px}
+  #search-top-box{display:none}.top-bar-menu{display:none}.mobile-top-bar{display:flex;overflow:auto}.mobile-top-bar a{color:#fff;padding:9px 12px;white-space:nowrap;font-size:11px}
+  #side-bar{float:none;width:auto;display:block;padding:10px 15px}
+  #main-content{margin-left:0;padding:20px 15px 45px}
+  #page-title{font-size:30px}.info-container,.two-column{grid-template-columns:1fr}
 }
