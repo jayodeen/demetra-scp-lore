@@ -96,3 +96,19 @@ a:hover{text-decoration:underline}
   .document-meta,.columns{grid-template-columns:1fr}
   .topbar-inner a{padding:9px 11px;font-size:11px}
 }
+
+/* LORE MANAGER rich-content support */
+.rich-content img{max-width:100%;height:auto}
+.rich-content blockquote{border-left:4px solid var(--red);margin:18px 0;padding:10px 16px;background:#f4f4f4;color:#555}
+.rich-content table{width:100%;border-collapse:collapse;margin:18px 0}
+.rich-content th,.rich-content td{border:1px solid #aaa;padding:8px;text-align:left}
+.rich-content pre{background:#222;color:#ddd;padding:14px;overflow:auto}
+.rich-content mark{padding:0 2px}
+.lore-nav{display:flex;justify-content:space-between;gap:12px;margin-top:35px;padding-top:18px;border-top:1px solid #aaa}
+.lore-nav a{border:1px solid #bbb;padding:10px 14px;background:#f7f7f7;max-width:48%}
+.lore-nav a:hover{background:#eee;text-decoration:none}
+.license-footer{font-size:11px;line-height:1.5;max-width:900px;margin:10px auto 0;color:#666}
+.custom-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}
+.custom-field{border:1px solid #bbb;background:#f7f7f7;padding:9px}
+.custom-field span{display:block;font-size:9px;text-transform:uppercase;color:#777;font-weight:bold;margin-bottom:4px}
+@media(max-width:700px){.custom-fields{grid-template-columns:1fr}.lore-nav{flex-direction:column}.lore-nav a{max-width:none}}
