@@ -1,22 +1,8 @@
-# Зона-40 — исправленный Sigma-9 для GitHub Pages
+# ЗОНА-40
 
-Исправлена проблема предыдущей версии: официальный Sigma-9 CSS больше не управляет
-раскладкой нашего HTML напрямую. Он загружается первым, а `style.css` после него
-сбрасывает конфликтующие Wikidot-позиционирования и даёт обычной HTML-структуре
-нормальную раскладку.
+GitHub Pages project for the RP lore archive.
 
-Что исправлено:
-- шапка больше не залезает на sidebar;
-- логотип и название находятся в нормальной шапке;
-- верхнее меню не теряется на фоне страницы;
-- sidebar находится внутри сетки, а не поверх контента;
-- основной текст имеет нормальную ширину;
-- таблица и блоки не растягиваются на весь экран;
-- мобильная версия имеет кнопку открытия меню;
-- поиск работает по текущему документу.
+## Important
+The site now uses a local `style.css`. It does not depend on the external Sigma-9 stylesheet, so GitHub Pages cannot introduce layout conflicts from that external CSS.
 
-Sigma-9 подключается напрямую:
-https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css
-
-GitHub Pages не исполняет Wikidot `[[include]]`, `[[code]]`, `theme:site`
-и `wdfiles.com/local--code`, поэтому здесь используется обычный HTML/CSS.
+The main page is `index.html`. Lore is under `lore/`.
