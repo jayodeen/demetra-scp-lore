@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var b=document.querySelector(".menu");var s=document.querySelector(".side");if(b)b.onclick=function(){s.classList.toggle("open")};var p=location.pathname.split("/").pop()||"index.html";document.querySelectorAll(".nav").forEach(function(a){if(a.getAttribute("href")===p)a.classList.add("active")})});
