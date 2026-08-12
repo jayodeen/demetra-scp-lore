@@ -1,0 +1,189 @@
+<!doctype html><html lang="ru"><head><style data-lore-export-style>/* ZONA-40 — local site stylesheet
+   Self-contained for GitHub Pages. No Wikidot/Sigma dependency. */
+
+:root{
+  --bg:#f2f2f2;
+  --paper:#fff;
+  --ink:#222;
+  --muted:#6d6d6d;
+  --line:#c8c8c8;
+  --soft:#f7f7f7;
+  --black:#202020;
+  --red:#901c1c;
+  --red-dark:#681313;
+  --mono:"Roboto Mono","Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:#7f1717;text-decoration:none}
+a:hover{text-decoration:underline}
+.site{max-width:1200px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 22px rgba(0,0,0,.08)}
+.site-header{background:#fff;border-bottom:4px solid var(--red)}
+.header-inner{min-height:110px;max-width:1140px;margin:0 auto;padding:22px 25px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.site-brand{display:flex;align-items:center;gap:14px;color:#222;text-decoration:none;min-width:0}
+.site-brand:hover{text-decoration:none}
+.scp-mark{width:58px;height:58px;border:3px solid #222;border-radius:50%;display:grid;place-items:center;position:relative;flex:0 0 auto}
+.scp-mark:before,.scp-mark:after{content:"";position:absolute;background:#222}
+.scp-mark:before{width:3px;height:76px;transform:rotate(60deg)}
+.scp-mark:after{width:3px;height:76px;transform:rotate(-60deg)}
+.scp-mark-center{position:relative;z-index:2;background:#fff;padding:3px;font:bold 11px var(--mono)}
+.brand-copy{display:flex;flex-direction:column;min-width:0}
+.brand-title{font:700 30px var(--mono);letter-spacing:-1px;line-height:1.1}
+.brand-subtitle{font:700 10px Arial,sans-serif;letter-spacing:1.2px;color:#777;margin-top:5px}
+.site-search{display:flex;gap:5px}
+.site-search input{width:250px;height:32px;border:1px solid #aaa;padding:5px 9px;background:#fff;color:#222}
+.site-search button{height:32px;background:var(--red);color:#fff;border:0;padding:0 12px;cursor:pointer}
+.site-search button:hover{background:var(--red-dark)}
+.mobile-menu{display:none;background:#222;color:#fff;border:0;padding:8px 10px;cursor:pointer}
+.site-topbar{background:#222;border-bottom:3px solid var(--red)}
+.topbar-inner{display:flex;max-width:1140px;margin:auto;overflow:auto}
+.topbar-inner a{color:#fff;padding:10px 15px;font-size:12px;white-space:nowrap}
+.topbar-inner a:hover{background:var(--red);text-decoration:none}
+.site-layout{display:grid;grid-template-columns:225px minmax(0,1fr);min-height:calc(100vh - 150px)}
+.site-sidebar{background:#f7f7f7;border-right:1px solid #ccc;padding:20px 12px}
+.sidebar-box{border:1px solid #ccc;margin-bottom:15px;background:#fff}
+.sidebar-heading{background:var(--red);color:#fff;padding:8px 10px;font-weight:bold;font-size:12px}
+.site-sidebar a{display:block;padding:7px 9px;border-bottom:1px solid #ddd;font-size:12px;color:#333}
+.site-sidebar a:last-child{border-bottom:0}
+.site-sidebar a:hover{background:#eee;text-decoration:none;color:#7f1717}
+.sidebar-text{padding:6px 9px;color:#555;font-size:12px}
+.sidebar-text.mono,.mono{font-family:var(--mono)}
+.site-main{padding:25px 38px 55px;min-width:0}
+.breadcrumbs{color:#777;font-size:12px;margin:0 0 22px}
+.classification{display:flex;justify-content:space-between;gap:20px;background:#eee;border-left:5px solid var(--red);padding:10px 13px;margin-bottom:22px;font-size:11px}
+.classification strong{font-family:var(--mono)}
+.classification span{color:#666}
+.document-title{border-bottom:2px solid #222;padding-bottom:15px}
+.eyebrow{font:bold 10px var(--mono);letter-spacing:1px;color:#777;margin-bottom:5px}
+.document-title h1{margin:0 0 8px;font:700 36px var(--mono);line-height:1.2}
+.document-title p{margin:0 0 12px;color:#555}
+.document-title code{font:11px var(--mono);color:#555}
+.document-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.document-meta>div{border:1px solid #bbb;background:#f5f5f5}
+.document-meta span{display:block;padding:7px;border-bottom:1px solid #ccc;font-size:10px;font-weight:bold;color:#666}
+.document-meta strong{display:block;padding:9px;font:12px var(--mono)}
+.doc-section{margin-top:28px}
+.doc-section h2{font:700 22px var(--mono);border-bottom:1px solid #aaa;padding-bottom:7px;margin:0 0 15px}
+.doc-section h3{font-size:15px;margin:0 0 7px}
+.doc-section p{margin:10px 0}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
+.doc-block{border:1px solid #bbb;background:#fafafa;padding:16px}
+.doc-block h3{font-family:var(--mono)}
+.doc-block p:last-child{margin-bottom:0}
+.warning{background:#eee;border-left:5px solid var(--red);padding:12px 15px;margin:20px 0}
+.terminal,.code-block{background:#222;color:#ddd;border:1px solid #111;padding:13px;overflow:auto}
+.terminal{font:12px/1.7 var(--mono);white-space:pre-wrap}
+.site-main hr{border:0;border-top:1px solid #bbb;margin:35px 0}
+.site-footer{text-align:center;border-top:2px solid #222;margin-top:45px;padding:25px;color:#666}
+.site-footer strong{display:block;font:700 13px var(--mono);color:#444}
+.site-footer small{display:block;margin-top:5px}
+.search-hit{background:#fff0a8;outline:2px solid #e0c400}
+@media(max-width:800px){
+  .header-inner{min-height:85px;padding:15px}
+  .site-search{display:none}
+  .mobile-menu{display:block}
+  .brand-title{font-size:24px}
+  .brand-subtitle{font-size:8px;letter-spacing:.7px}
+  .scp-mark{width:48px;height:48px}
+  .site-layout{grid-template-columns:1fr}
+  .site-sidebar{border-right:0;border-bottom:1px solid #ccc;padding:10px 15px}
+  .site-sidebar.open{display:block}
+  .site-main{padding:20px 15px 45px}
+  .document-title h1{font-size:29px}
+  .classification{display:block}
+  .classification span{display:block;margin-top:5px}
+  .document-meta,.columns{grid-template-columns:1fr}
+  .topbar-inner a{padding:9px 11px;font-size:11px}
+}
+
+
+/* LORE MANAGER v6 image layout */
+.lore-image{display:block;padding:0;margin-top:0;margin-bottom:14px}.lore-image img{border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,.12)}.lore-image figcaption{font-size:11px;line-height:1.4;color:var(--muted);padding-top:6px}.back-link{display:inline-block;border:1px solid var(--line);background:var(--soft);padding:7px 11px;margin-bottom:8px}.back-link:hover{background:#eee;text-decoration:none}
+
+.archive-category-head{display:flex;align-items:end;justify-content:space-between;gap:15px;border-bottom:1px solid #aaa;padding-bottom:7px}.archive-category-head h2{margin:0;border:0;padding:0}.archive-category-head h2 a{color:inherit}.archive-count{font-size:11px;color:#777;white-space:nowrap;margin-bottom:4px}.archive-cards{gap:12px}.archive-card{padding:20px;min-height:120px}.archive-card h3{font-size:19px}.archive-card p{font-size:11px;color:#777}.license-footer{max-width:900px;margin:10px auto 0;font-size:11px;line-height:1.5;color:#777}.lore-module{margin:18px 0}.lore-module.warning{background:#eee;border-left:5px solid var(--red);padding:12px 15px}.lore-module.quote{border-left:4px solid var(--red);padding:10px 15px;background:#f5f5f5}.lore-module.code{background:#222;color:#ddd;padding:13px;font-family:var(--mono);white-space:pre-wrap}.lore-module.callout{border:1px solid #bbb;background:#fafafa;padding:14px}.lore-module.keyvalue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.lore-module.keyvalue>div{border:1px solid #ccc;background:#f7f7f7;padding:8px}.lore-module.keyvalue strong{display:block;font:11px var(--mono);color:#666;margin-bottom:4px}.lore-module table{width:100%;border-collapse:collapse}.lore-module th,.lore-module td{border:1px solid #bbb;padding:7px;text-align:left}.lore-module th{background:#eee}
+
+/* v8 */
+.custom-fields{} .document-meta{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.lore-image{box-sizing:border-box}.lore-image figcaption{font-size:11px;color:#666;text-align:center;margin-top:6px;line-height:1.35}.rich-content .lore-module{margin:20px 0}.rich-content .lore-module.warning{background:#eee;border-left:5px solid var(--red);padding:12px 15px}.rich-content .lore-module.quote{border-left:4px solid var(--red);padding:10px 15px;background:#f5f5f5}.rich-content .lore-module.code{background:#222;color:#ddd;padding:13px;font-family:var(--mono);white-space:pre-wrap}.rich-content .lore-module.callout{border:1px solid #bbb;background:#fafafa;padding:14px}.rich-content .lore-module.keyvalue{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:7px}.rich-content .lore-module.keyvalue>div{border:1px solid #ccc;background:#f7f7f7;padding:8px}.rich-content .lore-module.keyvalue strong{display:block;font:11px var(--mono);color:#666;margin-bottom:4px}.rich-content .lore-module table{width:100%;border-collapse:collapse}.rich-content .lore-module th,.rich-content .lore-module td{border:1px solid #bbb;padding:7px;text-align:left}.rich-content .lore-module th{background:#eee}
+
+
+/* LORE Manager — exported module styles */
+.lore-module{position:relative;margin:20px 0;padding:16px;border:1px solid #c7c7c7;border-left:6px solid #8f1c1c;border-radius:3px;background:#fafafa;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.lore-module.callout{border-left-color:#245a86;background:#eef6ff}
+.lore-module.warning{border-left-color:#b27b00;background:#fff8e6}
+.lore-module.quote{border-left-color:#a11d1d;background:#fffafa}
+.lore-module.quote .module-quote-text{font:italic 18px/1.55 Georgia,serif;margin:0 0 12px;padding:0}
+.lore-module.quote .module-author{font:14px/1.4 Arial,sans-serif;color:#555}
+.lore-module.code{border-left-color:#333;background:#242424;color:#eee;padding:13px;font-family:var(--mono,monospace)}
+.lore-module.keyvalue{border-left-color:#596b2d;background:#f8faef}
+.lore-module.keyvalue .module-kv-row{display:grid;grid-template-columns:minmax(140px,1fr) minmax(180px,2fr);border-top:1px solid #ddd;padding:8px;gap:8px}
+.lore-module.table{border-left-color:#5b4a8f;background:#faf9ff}
+.lore-module.table table{width:100%;border-collapse:collapse}
+.lore-module.table th,.lore-module.table td{border:1px solid #bbb;padding:8px;text-align:left}
+.lore-module.table th{background:#eee}
+.lore-module.divider{display:block!important;position:relative!important;height:2px!important;min-height:2px!important;width:100%!important;margin:18px 0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.lore-module.divider>hr{display:block!important;width:100%!important;height:0!important;margin:0!important;padding:0!important;border:0!important;border-top:2px solid #555!important}
+.lore-module.tabs{border-left-color:#35658f;background:#f5f9fc;padding:16px}
+.lore-module.tabs .module-title{margin:0 0 10px;font-weight:700}
+.lore-module.tabs .module-tabs-bar{display:flex;align-items:stretch;gap:3px;flex-wrap:wrap;margin:0}
+.lore-module.tabs .module-tab-button{border:1px solid #b8b8b8;background:#ededed;color:#222;padding:8px 12px;cursor:pointer;font:700 12px/1.2 Arial,sans-serif}
+.lore-module.tabs .module-tab-button.active{background:#d9d9d9;color:#111;border-color:#999}
+.lore-module.tabs .module-tab-panels{border:1px solid #b8c5d0;background:#fff;padding:14px;min-height:80px}
+.lore-module.tabs .module-tab-panel{display:none;outline:0;line-height:1.6}
+.lore-module.tabs .module-tab-panel.active{display:block}
+.lore-module.tabs .module-tab-add,.lore-module .module-editor-only{display:none!important}
+.lore-module.attachment{border:0!important;border-left:0!important;background:transparent!important;padding:0!important;box-shadow:none}.lore-module.attachment .attachment-body{display:flex;flex-direction:column;align-items:flex-start;width:fit-content;max-width:100%;padding:10px;border:1px solid #c7c7c7;border-radius:3px;background:#fafafa;box-sizing:border-box}.lore-module.attachment img,.lore-module.attachment video,.lore-module.attachment iframe{display:block;height:auto;max-width:100%}.lore-module.attachment iframe{aspect-ratio:16/9;border:0}.lore-module.attachment audio{display:block;max-width:100%}.lore-module.attachment .attachment-caption{display:block;align-self:stretch;margin-top:8px;font:13px/1.5 monospace;color:#555;text-align:inherit}.lore-module.attachment[data-attachment-align="left"] .attachment-caption{text-align:left}.lore-module.attachment[data-attachment-align="center"] .attachment-caption{text-align:center}.lore-module.attachment[data-attachment-align="right"] .attachment-caption{text-align:right}.lore-module.attachment .attachment-file{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #bbb;background:#eee;color:inherit;text-decoration:none}.lore-module.attachment .module-controls{display:none!important}
+</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Архив Demetra LORE</title></head><body><div class="site"><header class="site-header"><div class="header-inner"><a class="site-brand" href="index.html"><span class="scp-mark"><span class="scp-mark-center">SCP</span></span><span class="brand-copy"><span class="brand-title">Demetra LORE</span><span class="brand-subtitle">SCP FOUNDATION / DEMETRA SERVER BRANCH</span></span></a></div></header><nav class="site-topbar"><div class="topbar-inner"><a href="index.html">Главная</a><a href="lore/index.html">Архив ЛОРа</a><a href="lore/zones/index.html">Зоны</a><a href="lore/scp/index.html">SCP</a><a href="lore/documents/index.html">Документы</a><a href="lore/personnel/index.html">Персонал</a></div></nav><div class="site-layout"><aside class="site-sidebar"><section class="sidebar-box"><div class="sidebar-heading">Навигация</div><a href="index.html">Главная</a><a href="lore/index.html">Архив ЛОРа</a><a href="lore/zones/index.html">Зоны / Участки / Сектора</a><a href="lore/scp/index.html">SCP-объекты</a><div class="sidebar-heading">Система</div><div class="sidebar-text">Статус: <span style="color: rgb(0, 128, 0);">АКТИВНА</span></div></section></aside><main class="site-main"><div style="text-align: center;"><span style="font-family: Verdana;"><span style="font-size: xxx-large;"></span></span><span style="font-size: 15px;"><span style="font-size: 16px;"><span style="font-size: 16px;"><span style="font-family: Verdana;"><span style="font-size: xxx-large;">Архив ЛОРа проекта&nbsp;</span><span style="font-size: xxx-large; color: rgb(255, 115, 0);">Demetra</span></span><span style="font-size: xxx-large;"><font color="#000000"><span style="font-family: Verdana;">.</span></font></span></span></span></span><span style="font-size: xxx-large;"><font color="#000000"><span style="font-family: Verdana;"><br><section class="lore-module divider"><hr></section></span></font></span></div><div style="text-align: center;"><div style="text-align: left;"><span style="font-size: medium;">Здесь вы можете ознакомиться с <span style="font-size: 15px;"><span style="font-size: 16px;"><span style="font-size: 16px;">канонами</span></span></span>, придуманными сообществом игрового сервера Demetra Project, отдела Events.</span></div><div style="text-align: left;"><div style="text-align: left;"><span style="color: rgb(0, 0, 0); font-size: medium;">Созданный нами&nbsp;<span style="text-align: center; font-family: Arial, Helvetica, sans-serif;">контент, относящийся к SCP Foundation, включая логотип и концепцию, распространяется по лицензии Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0).<br><br><section class="lore-module quote"><div class="module-body" style="text-align: left;"><blockquote class="module-quote-text"><span style="text-align: left;">«Единого канона не существует, всё является каноном — и в то же время ничто им не является».</span></blockquote><cite class="module-author">— Комьюнити SCP</cite></div></section><section class="lore-module callout"><div class="module-title">ИНФОРМАЦИОННЫЙ БЛОК</div><div class="module-body">Введите содержимое информационного блока.</div></section><section class="lore-module warning"><div class="module-title">⚠ ПРЕДУПРЕЖДЕНИЕ</div><div class="module-body">Введите предупреждение.</div></section><section class="lore-module tabs" data-tab-module="1" style="--tabs-accent: #9b2d30; border-left-color: rgb(155, 45, 48);"><div class="module-tabs"><div class="module-tabs-bar"><button type="button" class="module-tab-button active" data-tab-index="0"><span>ОБЗОР</span></button><button type="button" class="module-tab-button" data-tab-index="1"><span>ОПЕРАЦИЯ</span></button><button type="button" class="module-tab-button" data-tab-index="2"><span>ПРИМЕЧАНИЯ</span></button></div><div class="module-tab-panels"><div class="module-tab-panel active" data-tab-panel="0">Основное содержание.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div><div class="module-tab-panel" data-tab-panel="1">Описание операции, допроса, структуры или другого материала.</div><div class="module-tab-panel" data-tab-panel="2">Дополнительные сведения.</div></div></div></section><section class="lore-module table"><div class="module-body"><table><thead><tr><th>Колонка 1</th><th>Колонка 2</th><th>Колонка 3</th><th>Колонка 4</th></tr></thead><tbody><tr><td>Значение</td><td>Значение</td><td>Значение</td><td>Значение</td></tr><tr><td>Значение</td><td>Значение</td><td>Значение</td><td>Значение</td></tr><tr><td>Значение</td><td>Значение</td><td>Значение</td><td>Значение</td></tr></tbody></table></div><div class="table-caption-bottom">Кол-во пострадавших в инциденте SCP-173-A</div></section><section class="lore-module attachment" data-attachment-type="video" data-attachment-source="https://youtu.be/HWyzKmXquJk?si=gXQDHnElCA994E8t" data-attachment-width="420px" data-attachment-align="center" data-attachment-alt="" data-attachment-filename=""><div class="attachment-body" style="margin-left: auto; margin-right: auto;"><iframe class="attachment-youtube" src="https://www.youtube.com/embed/HWyzKmXquJk?rel=0&amp;playsinline=1" title="Крутая песня" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" style="width: 420px; max-width: 100%; aspect-ratio: 16 / 9; border: 0px;"></iframe><div class="attachment-caption" style="text-align: center;">Крутая песня</div></div></section><br></span></span></div></div></div><footer class="site-footer"><strong>SECURE. CONTAIN. PROTECT.</strong><p class="license-footer">Контент, относящийся к SCP Foundation, включая логотип и концепцию, распространяется по лицензии <strong>Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)</strong>. Данный сайт является фанатским проектом и не связан с официальным руководством SCP Foundation. Все материалы, основанные на SCP Foundation, лицензированы на тех же условиях.</p><a href="https://discord.gg/NbxEw5GVb9">Discord</a></footer></main></div></div><script>const menuButton = document.getElementById("mobile-menu");
+const sidebar = document.getElementById("sidebar");
+
+if (menuButton && sidebar) {
+  menuButton.addEventListener("click", () => {
+    const open = sidebar.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+}
+
+const searchForm = document.getElementById("site-search");
+const searchInput = document.getElementById("search-input");
+const main = document.querySelector(".site-main");
+
+if (searchForm && searchInput && main) {
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    document.querySelectorAll(".search-hit").forEach(el => {
+      el.classList.remove("search-hit");
+    });
+
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) return;
+
+    const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT);
+    let node;
+
+    while ((node = walker.nextNode())) {
+      if (node.parentElement && !["SCRIPT","STYLE"].includes(node.parentElement.tagName)) {
+        if (node.nodeValue.toLowerCase().includes(query)) {
+          node.parentElement.classList.add("search-hit");
+          node.parentElement.scrollIntoView({behavior:"smooth", block:"center"});
+          break;
+        }
+      }
+    }
+  });
+}
+
+
+// LORE Manager tab modules
+document.querySelectorAll('.lore-module.tabs').forEach(function(module){
+  var buttons=module.querySelectorAll('.module-tab-button[data-tab-index]');
+  var panels=module.querySelectorAll('.module-tab-panel[data-tab-panel]');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var i=Number(btn.getAttribute('data-tab-index'))||0;
+      buttons.forEach(function(b,j){b.classList.toggle('active',j===i);});
+      panels.forEach(function(panel,j){panel.classList.toggle('active',j===i);});
+    });
+  });
+});
+</script></body></html>
